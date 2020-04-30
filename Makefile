@@ -43,7 +43,9 @@ pipeline/%/conditions.csv: data/seq-runs/%/SampleSheet.csv pipeline/%/bc-map.csv
 		2>> $(@:.csv=.err)
 
 # Run starcode on each fastq, using gnu parallel to parse the conditions for barcode length
-pipeline/%/starcode.csv: data/seq-runs/% pipeline/%/conditions.csv
+# pipeline/%/starcode.csv: data/seq-runs/% pipeline/%/conditions.csv
+
+pipeline/%/starcode.csv: /gpfs/commons/groups/nygcfaculty/satija_knowles/swabseq/% pipeline/%/conditions.csv
 	@echo "Counting BCs for all fastq's in $<"
 	@parallel --header : --colsep "," \
 		zcat $</"{Sample_ID}"*_S*_R1_001.fastq.gz \

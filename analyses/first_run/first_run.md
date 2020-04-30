@@ -334,8 +334,8 @@ df.wide
     ##    <chr>     <chr>    <fct> <chr> <chr>  <chr>                 <dbl> <dbl>
     ##  1 Plate1-A… Plate1   A     01    N1_S2… N1 Expected             0       0
     ##  2 Plate1-A… Plate1   A     02    N1_S2… N1 Expected             0       5
-    ##  3 Plate1-A… Plate1   A     03    N1_S2… N1 Expected            11.0     0
-    ##  4 Plate1-A… Plate1   A     04    N1_S2… N1 Expected            11.0     8
+    ##  3 Plate1-A… Plate1   A     03    N1_S2… N1 Expected             0       0
+    ##  4 Plate1-A… Plate1   A     04    N1_S2… N1 Expected             0       8
     ##  5 Plate1-A… Plate1   A     05    N1_S2… N1 Expected            32.9  1727
     ##  6 Plate1-A… Plate1   A     06    N1_S2… N1 Expected            32.9  2946
     ##  7 Plate1-A… Plate1   A     07    N1_S2… N1 Expected            32.9  1865
@@ -371,16 +371,16 @@ df.wide.nulls
     ## # A tibble: 180 x 10
     ##    expected_amplic… Sample_ID Plate_ID Row   Col   bc_set RNA_copies   RNA
     ##    <chr>            <chr>     <chr>    <fct> <chr> <chr>       <dbl> <dbl>
-    ##  1 N1 Expected      Plate1-A… Plate1   A     03    N1_S2…       11.0     0
-    ##  2 N1 Expected      Plate1-A… Plate1   A     04    N1_S2…       11.0     8
-    ##  3 N1 Expected      Plate1-A… Plate1   A     05    N1_S2…       32.9  1727
-    ##  4 N1 Expected      Plate1-A… Plate1   A     06    N1_S2…       32.9  2946
-    ##  5 N1 Expected      Plate1-A… Plate1   A     07    N1_S2…       32.9  1865
-    ##  6 N1 Expected      Plate1-A… Plate1   A     08    N1_S2…       32.9  2081
-    ##  7 N1 Expected      Plate1-B… Plate1   B     03    N1_S2…       32.9    11
-    ##  8 N1 Expected      Plate1-B… Plate1   B     04    N1_S2…       32.9     0
-    ##  9 N1 Expected      Plate1-B… Plate1   B     05    N1_S2…       98.8  5557
-    ## 10 N1 Expected      Plate1-B… Plate1   B     06    N1_S2…       98.8  7588
+    ##  1 N1 Expected      Plate1-A… Plate1   A     05    N1_S2…       32.9  1727
+    ##  2 N1 Expected      Plate1-A… Plate1   A     06    N1_S2…       32.9  2946
+    ##  3 N1 Expected      Plate1-A… Plate1   A     07    N1_S2…       32.9  1865
+    ##  4 N1 Expected      Plate1-A… Plate1   A     08    N1_S2…       32.9  2081
+    ##  5 N1 Expected      Plate1-B… Plate1   B     05    N1_S2…       98.8  5557
+    ##  6 N1 Expected      Plate1-B… Plate1   B     06    N1_S2…       98.8  7588
+    ##  7 N1 Expected      Plate1-B… Plate1   B     07    N1_S2…       98.8  8325
+    ##  8 N1 Expected      Plate1-B… Plate1   B     08    N1_S2…       98.8  6194
+    ##  9 N1 Expected      Plate1-C… Plate1   C     05    N1_S2…      296.  23651
+    ## 10 N1 Expected      Plate1-C… Plate1   C     06    N1_S2…      296.  26484
     ## # … with 170 more rows, and 2 more variables: RPP30 <dbl>, Spike <dbl>
 
 ## Detection Plots

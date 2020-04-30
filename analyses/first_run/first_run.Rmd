@@ -286,7 +286,7 @@ Let's plot the ratio of viral RNA to spike-in as a function of increasing initia
 
 We only have the HEK293 lysate. 
 
-```{r, hek-lysate, fig.width=9, fig.height=4}
+```{r, detection, fig.width=9, fig.height=4}
 df.wide.nulls %>%
   inner_join(well.total, by="Sample_ID") %>%
   mutate(RNA_copies = if_else(RNA_copies == 0, 0.1, RNA_copies)) %>%
@@ -303,7 +303,7 @@ df.wide.nulls %>%
 We can see that indeed, we are getting detection from the various RNA samples. Some wells are dropping out however.
 
 Which wells are showing dropbox
-```{r}
+```{r, problematic-wells}
 df.wide.nulls %>% filter( Plate_ID %in% c("Plate1", "Plate2")) %>% 
     mutate(y=(RNA+1)/(Spike+1), 
            problematic = (y < 1e-4) & (RNA_copies >= 1)) %>%
@@ -315,7 +315,7 @@ df.wide.nulls %>% filter( Plate_ID %in% c("Plate1", "Plate2")) %>%
 ```
 
 Different way of looking at the data to check if the spike reads or the viral reads are the problem. 
-```{r, fig.width=9, fig.height=4}
+```{r, RNA_vs_spike_counts, fig.width=9, fig.height=4}
 require(scales) 
 asinh10_trans = trans_new("asinh10",
                         function(g) {asinh(.5 * g)/log(10)},
@@ -337,7 +337,7 @@ df.wide.nulls %>%
 ```
 
 Zoom in on the problematic low counts
-```{r, fig.width=9, fig.height=4}
+```{r, rna_vs_spike_zoom, fig.width=9, fig.height=4}
 require(scales) 
 asinh10_trans = trans_new("asinh10",
                         function(g) {asinh(.5 * g)/log(10)},
